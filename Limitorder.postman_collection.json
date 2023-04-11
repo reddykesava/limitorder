@@ -1,0 +1,353 @@
+{
+	"info": {
+		"_postman_id": "6fb57d7b-8691-41c8-8283-01765f7d0e8a",
+		"name": "limitorder",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "buyorder1:: 200",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"price\": 9,\r\n    \"quantity\": 90,\r\n    \"side\": \"buy\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/order",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"order"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "buyorder2::200",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"price\": 9,\r\n    \"quantity\": 60,\r\n    \"side\": \"buy\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/order",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"order"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "buyorder3::200",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"price\": 9,\r\n    \"quantity\": 50,\r\n    \"side\": \"buy\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/order",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"order"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "modifyBuyOrder2::201",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/order/aac53502-cdb1-4068-8fb8-c9bb29b87bbe?quantity=35",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"order",
+						"aac53502-cdb1-4068-8fb8-c9bb29b87bbe"
+					],
+					"query": [
+						{
+							"key": "quantity",
+							"value": "35"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "modifyBuyOrderNotExists::400",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"quantity\": 35\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/order/940f65d3-0443-4cfb-b3d9-0dc049c9f8ce?quantity=60",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"order",
+						"940f65d3-0443-4cfb-b3d9-0dc049c9f8ce"
+					],
+					"query": [
+						{
+							"key": "quantity",
+							"value": "60"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteBuyOrder2::200",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/order/1c15fc1e-64b7-459a-9fc1-0408c90a754e",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"order",
+						"1c15fc1e-64b7-459a-9fc1-0408c90a754e"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "sellOrder::200",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"price\": 9,\r\n    \"quantity\": 90,\r\n    \"side\": \"sell\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/order",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"order"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "sellOrder2::200",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"price\": 9,\r\n    \"quantity\": 60,\r\n    \"side\": \"sell\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/order",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"order"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "sellOrder3::200",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"price\": 9,\r\n    \"quantity\": 50,\r\n    \"side\": \"sell\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/order",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"order"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "modifySellOrder2",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"quantity\": 35\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/order/d925d998-09c6-400a-af8f-b1e59371396e?quantity=100",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"order",
+						"d925d998-09c6-400a-af8f-b1e59371396e"
+					],
+					"query": [
+						{
+							"key": "quantity",
+							"value": "100"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteSellOrder2",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/order/d925d998-09c6-400a-af8f-b1e59371396e",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"order",
+						"d925d998-09c6-400a-af8f-b1e59371396e"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DisplayOrderBook",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/order",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"order"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DisplayOrderbyOrderId",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/order/6f48a262-f035-4e43-a614-71a7507b8bef",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"order",
+						"6f48a262-f035-4e43-a614-71a7507b8bef"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "URL",
+			"value": "http://localhost:8083/trading",
+			"type": "default"
+		}
+	]
+}
